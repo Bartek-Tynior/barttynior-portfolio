@@ -11,7 +11,7 @@ const Home = () => {
                     bg={useColorModeValue('black', 'whiteAlpha.200')}
                     css={{ backdropFilter: 'blur(10px)' }}
                 >
-                    Hey ]
+                    Hey 
                 </Box>
         </Layout>
     )
