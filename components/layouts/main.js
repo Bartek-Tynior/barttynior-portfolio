@@ -15,7 +15,8 @@ const Main = ({ children, router }) => {
             </Head>
 
             <Navbar path={router.asPath}/>
-            <Container pb={20}>
+
+            <Container pb={20} minW="75%">
                 <Hero />
                 {children}
             </Container>
