@@ -4,7 +4,7 @@ import Layout from '../components/layouts/article'
 
 const Home = () => {
     return(
-        <Layout >
+        <Layout>
                 <Box
                     borderRadius="lg"
                     textAlign="center"
