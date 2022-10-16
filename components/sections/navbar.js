@@ -35,6 +35,7 @@ const Navbar = props => {
       position="fixed"
       as="nav"
       w="100%"
+      css={{ backdropFilter: 'blur(30px)' }}
       zIndex={2}
       {...props}
     >

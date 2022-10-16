@@ -1,70 +1,49 @@
 import {
+  Box,
   Flex,
   Heading,
-  Stack,
-  Text,
 } from "@chakra-ui/react"
-import { motion } from 'framer-motion'
+import styled from "@emotion/styled"
 
-const variants = {
-  hidden: { opacity: 0, x: 0, y: 0 },
-  enter: { opacity: 1, x: 0, y: 20 },
-  exit: { opacity: 0, x: -0, y: 0 }
-}
+const PrimaryColor = styled.span`
+    color: #fcd733;
+    background-image: -webkit-gradient( linear, left top, right top, from(#fc327c), to(#f430c3) );
+    background-image: linear-gradient(to right, #fc327c, #f430c3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+`
+
+const SecondaryColor = styled.span`
+    color: #156fff;
+    background-image: -webkit-gradient( linear, left top, right top, from(#156fff), to(#07b8ff) );
+    background-image: linear-gradient(to right, #156fff, #07b8ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+`
 
 const Hero = () => {
-
   return (
-    <motion.article
-      initial="hidden"
-      animate="enter"
-      exit="exit"
-      variants={variants}
-      transition={{ duration: 0.4, type: 'easeInOut' }}
-      style={{ position: 'relative' }}
-    >
-      <Flex
+    <Flex
         align="center"
         justify={{ base: "center"}}
         minH="100vh"
         minW="100%"
       >
-        <Stack
-          spacing={4}
-          align={"center"}
-        >
-          <Heading
-            as="h1"
-            size="xl"
-            fontWeight="bold"
-            color="primary.800"
-            textAlign={"center"}
-          >
-            Welcome to my page!
+        <Box 
+        align="left"
+        w="50%"
+        textAlign="left"
+        pl={10}>
+          <Heading>
+            <PrimaryColor>Designer</PrimaryColor> & <SecondaryColor>Front-End Developer</SecondaryColor> from The Netherlands
           </Heading>
-          <Heading
-            as="h2"
-            size="md"
-            color="primary.800"
-            opacity="0.8"
-            fontWeight="normal"
-            lineHeight={1.5}
-            textAlign={"center"}
-          >
-            Nice
-          </Heading>
-          <Text
-            fontSize="xs"
-            mt={2}
-            textAlign="center"
-            color="primary.800"
-            opacity="0.6"
-          >
-            No credit card required.
-          </Text>
-        </Stack>
-      </Flex>
-    </motion.article>
+        </Box>
+        <Box
+        align="center"
+        w="50%">
+          Right Side
+        </Box>
+    </Flex>
   )
 }
 
