@@ -1,13 +1,15 @@
-// import Link from 'next/link'
-import { Heading, List, Link, Button,
-    ListItem } from '@chakra-ui/react'
+import { Heading, List, Link, Button, ListItem } from '@chakra-ui/react'
 import Layout from '../components/layouts/article'
 import Section from '../components/utils/section'
 import Chapter from '../components/utils/chapter'
 import TextField from '../components/utils/textfield'
+import Hero from '../components/sections/hero'
+import { Carousel, GridCard } from '../components/sections/grid'
 
 const Home = () => {
     return(
+        <>
+        <Hero/>
         <Layout>
             <Section>
                 <Chapter>
@@ -22,19 +24,17 @@ const Home = () => {
                 <Chapter>
                     Work
                 </Chapter>
-                <TextField>
-                    lorem
-                </TextField>
+                <Carousel>
+                    <GridCard title={"Nice"}></GridCard>
+                    <GridCard title={"Nice"}></GridCard>
+                    <GridCard title={"Nice"}></GridCard>
+                    <GridCard title={"Nice"}></GridCard>
+                </Carousel>
             </Section>
             <Section>
                 <Chapter>
                     Contact Me
                 </Chapter>
-                <TextField>
-                    lorem
-                </TextField>
-            </Section>
-            <Section delay={0.3}>
                 <Heading as="h3" variant="section-title">
                     On the web
                 </Heading>
@@ -52,6 +52,7 @@ const Home = () => {
                 </List>
             </Section>
         </Layout>
+        </>
     )
 }
 

@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import { GridStyle } from '../sections/grid'
 
 const Layout = ({ children, title }) => {
   const t = `${title}`
@@ -10,6 +11,8 @@ const Layout = ({ children, title }) => {
           </Head>
         )}
         {children}
+
+        <GridStyle />
       </>
   )
 }

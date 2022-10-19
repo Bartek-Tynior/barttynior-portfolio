@@ -1,8 +1,9 @@
 import { Box } from "@chakra-ui/react"
 
-const Section = ({ children}) => (
+const Section = ({ children }) => (
     <Box
-    align="center">
+    align="center"
+    >
         {children}
     </Box>
 )

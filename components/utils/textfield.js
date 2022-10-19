@@ -10,7 +10,7 @@ const TextField = styled.p`
 const textBox = ({children}) => {
     return (
         <Box
-        w="50%"
+        w={{base: "100%", md: "50%", sm: "100%"}}
         textAlign="center"
         >
             <TextField>
