@@ -5,7 +5,7 @@ import Footer from "../sections/footer.js";
 
 const Main = ({ children }) => {
     return(
-        <Box as="main">
+        <Box as="main" pb={10}>
             <Head>
                 <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
                 <title>Bart Tynior - portfolio</title>

@@ -25,7 +25,7 @@ export const Carousel = ({ children }) => {
 
 export const GridCard = ({children, href, title}) => {
     return (
-        <Box h="300px" w="200px" className='gridCard' textAlign="center">
+        <Box minH="300px" minW="200px" mr="30px" className='gridCard' textAlign="center">
             <LinkBox cursor="pointer">
                 <LinkOverlay href={href} target="_blank">
                     <Text mt={2}>{title}</Text>
@@ -45,10 +45,17 @@ export const GridStyle = () => (
             width: 50%;
         }
 
-      .inner-carousel {
-        display: flex;
-        justify-content: central;
-      }
+        .inner-carousel {
+            display: flex;
+            justify-content: central;
+        }
+
+        .gridCard {
+            border-style: solid;
+            border-width: 5px;
+            border-radius: 15px;
+        }
+
       `}
     />
 )

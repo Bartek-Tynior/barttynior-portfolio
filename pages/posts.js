@@ -2,14 +2,14 @@ import Layout from "../components/layouts/specifics";
 import Section from "../components/utils/section";
 import Chapter from "../components/utils/chapter";
 
-const Works = () => (
+const Posts = () => (
     <Layout title="Portfolio">
         <Section>
             <Chapter>
-                Work
+                Posts
             </Chapter>
         </Section>
     </Layout>
 )
 
-export default Works
+export default Posts
