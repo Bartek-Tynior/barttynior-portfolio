@@ -1,9 +1,9 @@
 // import NextLink from 'next/link'
-// import Image from 'next/image'
 import { motion } from "framer-motion";
 import { Box, Text, LinkBox, LinkOverlay } from '@chakra-ui/react'
 import { Global, css } from '@emotion/react'
 import { useState, useEffect, useRef } from "react";
+import Image from "next/image";
 
 export const Carousel = ({ children }) => {
         const [width, setWidth] = useState(0)
@@ -23,18 +23,29 @@ export const Carousel = ({ children }) => {
         )
 }
 
-export const GridCard = ({children, href, title}) => {
+export const GridCard = ({children, title, source}) => {
     return (
-        <Box minH="300px" minW="200px" mr="30px" className='gridCard' textAlign="center">
-            <LinkBox cursor="pointer">
-                <LinkOverlay href={href} target="_blank">
-                    <Text mt={2}>{title}</Text>
-                </LinkOverlay>
-                <Text fontSize={14}>{children}</Text>
-            </LinkBox>
+        <Box minH="400px" minW="300px" mr="30px" className='gridCard' textAlign="center">
+            <Text mt={5} mb={10} fontSize={25}>{title}</Text>
+            <Image width="100px"
+            height="100px"
+            src={source}
+             alt={title}/>
+            <Text fontSize={14}>{children}</Text>
         </Box>
     )
 }
+
+export const GridItem = ({ children, href, title }) => (
+    <Box w="100%" textAlign="center">
+      <LinkBox cursor="pointer">
+        <LinkOverlay href={href} target="_blank">
+          <Text mt={2}>{title}</Text>
+        </LinkOverlay>
+        <Text fontSize={14}>{children}</Text>
+      </LinkBox>
+    </Box>
+  )
 
 export const GridStyle = () => (
     <Global

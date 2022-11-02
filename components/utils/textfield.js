@@ -12,6 +12,7 @@ const textBox = ({children}) => {
         <Box
         w={{base: "100%", md: "50%", sm: "100%"}}
         textAlign="center"
+        mb={5}
         >
             <TextField>
                 {children}

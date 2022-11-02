@@ -7,6 +7,11 @@ import Hero from '../components/sections/hero'
 import { Carousel, GridCard } from '../components/sections/grid'
 import { ButtonGradient } from '../components/utils/button'
 
+import ReactLogo from '../public/images/logo/react-logo.svg'
+import JavaScriptLogo from '../public/images/logo/js-logo.svg'
+import JavaLogo from '../public/images/logo/java-logo.svg'
+import VueLogo from '../public/images/logo/vuejs-logo.svg'
+
 import { ChevronRightIcon, DownloadIcon } from '@chakra-ui/icons'
 
 const Home = () => {
@@ -26,13 +31,13 @@ const Home = () => {
             </Section>
             <Section>
                 <Chapter>
-                    Work
+                    Skills
                 </Chapter>
                 <Carousel>
-                    <GridCard title={"Nice"}></GridCard>
-                    <GridCard title={"Nice"}></GridCard>
-                    <GridCard title={"Nice"}></GridCard>
-                    <GridCard title={"Nice"}></GridCard>
+                    <GridCard title={"JavaScript"} source={JavaScriptLogo}></GridCard>
+                    <GridCard title={"React & React Native"} source={ReactLogo}></GridCard>
+                    <GridCard title={"Java"} source={JavaLogo}></GridCard>
+                    <GridCard title={"Vue"} source={VueLogo}></GridCard>
                 </Carousel>
             </Section>
             <Section>
